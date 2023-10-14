@@ -8,12 +8,16 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			transitionTimingFunction: {
+				'customBezier': 'cubic-bezier(0.76, 0, 0.24, 1)',
+			  },
 			backgroundImage: {},
 			colors: {
 				primary: '#0D0D0D',
 				secondary: '#CE4760',
 				accent: '#FFD600',
 				background: '#F2F2F2',
+				'gray-mid': '#999999',
 			},
 			animation: {
 				'fly-l': 'fly-l 0.5s infinite alternate',

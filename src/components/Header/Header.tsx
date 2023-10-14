@@ -1,9 +1,8 @@
 'use client'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import styles from './style.module.scss'
 import { usePathname } from 'next/navigation'
 import { AnimatePresence } from 'framer-motion'
-import Nav from './nav'
+import Nav from '@/components/Header/Nav'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Button from '@/components/ui/Button'
@@ -47,13 +46,13 @@ export default function Header() {
 
 	return (
 		<>
-			<div ref={header} className={styles.header}>
-				<div className={styles.logo}>
-					{/* <p className={styles.copyright}>©</p> */}
-					<div className={styles.name}>
-						{/* <p className={styles.codeBy}>Code by</p> */}
-						<p className={styles.dennis}>Dob</p>
-						<p className={styles.snellenberg}>Ivanov</p>
+			<div ref={header} className="absolute flex z-10 top-0 text-background p-[35px] justify-between w-full font-light box-border items-center">
+				<div className="flex cursor-pointer group">
+					<p className= "m-0 transition-all ease-customBezier group-hover:rotate-[360deg] "{styles.copyright}>©</p>
+					<div className="flex relative overflow-hidden whitespace-nowrap ml-1 transition-all ease-customBezier group-hover:pr-[30px]">
+						<p className="relative transition duration-75 ease-customBezier group-hover:translate-x-full"{styles.codeBy}>Code by</p>
+						<p className="relative transition duration-75 ease-customBezier pl-[0.3em] group-hover:-translate-x-[65px]"{styles.dennis}>Dob</p>
+						<p className="transition duration-75 ease-customBezier absolute left-[120px] pl-[0.3em] group-hover:-translate-x-[65px]"{styles.snellenberg}>Ivanov</p>
 					</div>
 				</div>
 				<div className={styles.nav}>
