@@ -9,11 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+     
       },
+      colors: {
+				primary: '#0D0D0D',
+				secondary: '#CE4760',
+				accent: '#FFD600',
+				background: '#F2F2F2',
+			},
+      animation: {
+				'fly-l': 'fly-l 0.5s infinite alternate',
+				'fly-r': 'fly-r 0.5s infinite alternate',
+			},
     },
+    keyframes: {
+			'fly-l': {
+				'100%': {
+					transform: 'rotate(30deg) rotateX(15deg)',
+				},
+			},
+
+			'fly-r': {
+				'100%': {
+					transform: 'rotate(-30deg) rotateX(-15deg)',
+				},
+			},
+		},
   },
   plugins: [],
 }
