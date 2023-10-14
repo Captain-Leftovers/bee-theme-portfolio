@@ -46,46 +46,59 @@ export default function Header() {
 
 	return (
 		<>
-			<div ref={header} className="absolute flex z-10 top-0 text-background p-[35px] justify-between w-full font-light box-border items-center">
+			<div
+				ref={header}
+				className="absolute flex z-10 top-0 text-background p-[35px] justify-between w-full font-light box-border items-center"
+			>
 				<div className="flex cursor-pointer group">
-					<p className= "m-0 transition-all ease-customBezier group-hover:rotate-[360deg] "{styles.copyright}>©</p>
+					<p className="m-0 transition-all ease-customBezier group-hover:rotate-[360deg] ">
+						©
+					</p>
 					<div className="flex relative overflow-hidden whitespace-nowrap ml-1 transition-all ease-customBezier group-hover:pr-[30px]">
-						<p className="relative transition duration-75 ease-customBezier group-hover:translate-x-full"{styles.codeBy}>Code by</p>
-						<p className="relative transition duration-75 ease-customBezier pl-[0.3em] group-hover:-translate-x-[65px]"{styles.dennis}>Dob</p>
-						<p className="transition duration-75 ease-customBezier absolute left-[120px] pl-[0.3em] group-hover:-translate-x-[65px]"{styles.snellenberg}>Ivanov</p>
+						<p className="relative transition duration-75 ease-customBezier group-hover:translate-x-full">
+							Code by
+						</p>
+						<p className="relative transition duration-75 ease-customBezier pl-[0.3em] group-hover:-translate-x-[65px]">
+							Dob
+						</p>
+						<p className="transition duration-75 ease-customBezier absolute left-[120px] pl-[0.3em] group-hover:-translate-x-[65px]">
+							Ivanov
+						</p>
 					</div>
 				</div>
-				<div className={styles.nav}>
+				<div className="flex items-center">
 					<Magnetic>
-						<div className={styles.el}>
+						<div className="flex flex-col relative z-10 p-4 cursor-pointer group">
 							<a>Work</a>
-							<div className={styles.indicator}></div>
+							<div className="group-hover:scale-100 absolute w-[5px] h-[5px] top-11 left-1/2 bg-background transition scale-0 -translate-x-1/2 ease-customBezier"></div>
 						</div>
 					</Magnetic>
 					<Magnetic>
-						<div className={styles.el}>
+						<div className="flex flex-col relative z-10 p-4 cursor-pointer group">
 							<a>About</a>
-							<div className={styles.indicator}></div>
+							<div className="group-hover:scale-100 absolute w-[5px] h-[5px] top-11 left-1/2 bg-background transition scale-0 -translate-x-1/2 ease-customBezier"></div>
 						</div>
 					</Magnetic>
 					<Magnetic>
-						<div className={styles.el}>
+						<div className="flex flex-col relative z-10 p-4 cursor-pointer group">
 							<a>Contact</a>
-							<div className={styles.indicator}></div>
+							<div className="group-hover:scale-100 absolute w-[5px] h-[5px] top-11 left-1/2 bg-background transition scale-0 -translate-x-1/2 ease-customBezier"></div>
 						</div>
 					</Magnetic>
 				</div>
 			</div>
-			<div ref={button} className={styles.headerButtonContainer}>
+			<div ref={button} className="fixed right-0 z-20 scale-0">
 				<Button
 					onClick={() => {
 						setIsActive(!isActive)
 					}}
-					className={`${styles.button}`}
+					className="relative m-5 w-20 h-20 rounded-full bg-primary cursor-pointer flex items-center justify-center"
 				>
 					<div
-						className={`${styles.burger} ${
-							isActive ? styles.burgerActive : ''
+						className={`w-full relative z-10 after:content-[""] after:block after:h-[1px] after:w-2/5 after:m-auto after:bg-background after:relative after:transform after:-top-[5px] before:top-[5px] before:content-[""] before:block before:h-[1px] before:w-2/5 before:m-auto before:bg-background before:relative before:transform ${
+							isActive
+								? 'after:rotate-45 after:-top-[1px] before:-rotate-45 before:top-0 '
+								: ''
 						}`}
 					></div>
 				</Button>
