@@ -13,12 +13,14 @@
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
+    "locomotive-scroll": "^4.1.4",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
+    "@types/locomotive-scroll": "^4.1.1",
     "@types/node": "^20",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18",

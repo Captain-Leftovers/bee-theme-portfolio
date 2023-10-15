@@ -10,6 +10,7 @@ const config: Config = {
 		extend: {
 			transitionTimingFunction: {
 				'customBezier': 'cubic-bezier(0.76, 0, 0.24, 1)',
+
 			  },
 			backgroundImage: {},
 			colors: {

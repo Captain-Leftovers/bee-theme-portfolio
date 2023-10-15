@@ -7,6 +7,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Button from '@/components/ui/Button'
 import Magnetic from '@/components/ui/Magnetic'
+import BeeIcon from '../ui/BeeIcon'
 
 export default function Header() {
 	const header = useRef(null)
@@ -51,17 +52,11 @@ export default function Header() {
 				className="absolute flex z-10 top-0 text-background p-[35px] justify-between w-full font-light box-border items-center"
 			>
 				<div className="flex cursor-pointer group">
-					<p className="m-0 transition-all ease-customBezier group-hover:rotate-[360deg] ">
-						©
-					</p>
-					<div className="flex relative overflow-hidden whitespace-nowrap ml-1 transition-all ease-customBezier group-hover:pr-[30px]">
-						<p className="relative transition duration-75 ease-customBezier group-hover:translate-x-full">
-							Code by
-						</p>
-						<p className="relative transition duration-75 ease-customBezier pl-[0.3em] group-hover:-translate-x-[65px]">
-							Dob
-						</p>
-						<p className="transition duration-75 ease-customBezier absolute left-[120px] pl-[0.3em] group-hover:-translate-x-[65px]">
+					<BeeIcon className="m-0 transition-all ease-customBezier duration-500 group-hover:rotate-[360deg]" />
+
+					<div className="flex relative overflow-hidden items-center whitespace-nowrap ml-1 transition-all ease-customBezier group-hover:pr-[60px]">
+						<p className=" relative ">Dob</p>
+						<p className="transition duration-500 ease-customBezier absolute left-[120px] pl-[0.3em] group-hover:-translate-x-[90px]">
 							Ivanov
 						</p>
 					</div>

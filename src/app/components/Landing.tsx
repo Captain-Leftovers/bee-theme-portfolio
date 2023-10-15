@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image'
-import styles from './style.module.scss'
 import { useRef, useLayoutEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
@@ -46,26 +45,39 @@ export default function Home() {
 			variants={slideUp}
 			initial="initial"
 			animate="enter"
-			className={styles.landing}
+			className="relative flex h-screen overflow-hidden"
 		>
-			<Image
+			{/* <Image
 				src="/images/background.png"
 				fill={true}
 				alt="background"
-				style={{ backgroundColor: 'red' }}
-			/>
-			<div className={styles.sliderContainer}>
-				<div ref={slider} className={styles.slider}>
-					<p ref={firstText}>Freelance Developer -</p>
-					<p ref={secondText}>Freelance Developer -</p>
+				className=" bg-gray-mid object-cover"
+			/> */}
+			<div className="absolute top-[calc(100vh-350px)]">
+				<div ref={slider} className="relative whitespace-nowrap ">
+					<p
+						className=" relative m-0 text-background text-[200px] font-medium px-[50px]"
+						ref={firstText}
+					>
+						TODO : fix this
+						Web Developer 
+					</p>
+					<p
+						className=" absolute  left-full top-0 m-0 text-background text-[200px] font-medium px-[50px]"
+						ref={secondText}
+					>
+						Web Developer 
+						
+					</p>
 				</div>
 			</div>
 			<div
 				data-scroll
 				data-scroll-speed={0.1}
-				className={styles.description}
+				className="absolute top-[35%] left-[75%] text-background text-2xl font-light"
 			>
 				<svg
+					className="scale-[2] mb-10"
 					width="9"
 					height="9"
 					viewBox="0 0 9 9"
@@ -77,8 +89,8 @@ export default function Home() {
 						fill="white"
 					/>
 				</svg>
-				<p>Freelance</p>
-				<p>Designer & Developer</p>
+				<p className="m-0 mb-2.5">Web</p>
+				<p className="m-0 mb-2.5">Developer</p>
 			</div>
 		</motion.main>
 	)

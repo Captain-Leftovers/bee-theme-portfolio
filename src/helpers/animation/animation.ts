@@ -7,6 +7,8 @@ export const menuSlide = {
 	},
 }
 
+
+
 export const slide = {
 	initial: { x: 80 },
 	enter: (i:number) => ({

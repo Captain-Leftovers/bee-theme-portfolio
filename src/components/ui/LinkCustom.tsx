@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { slide, scale } from '@/helpers/animation'
+import { slide, scale } from '@/helpers/animation/animation'
 import { cn } from '@/lib/utils'
 
 type LinkCustomProps = {

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { opacity, slideUp } from '@/helpers/preloaderAnimation'
+import { opacity, slideUp } from '@/helpers/animation/preloaderAnimation'
 
 const words = [
 	'Hello',
@@ -14,7 +14,7 @@ const words = [
 	'Hallo',
 ]
 
-export default function Index() {
+export default function Preloader() {
 	const [index, setIndex] = useState(0)
 	const [dimension, setDimension] = useState({ width: 0, height: 0 })
 
@@ -62,12 +62,12 @@ export default function Index() {
 			{dimension.width > 0 && (
 				<>
 					<motion.p
-                    className='flex bg-background text-4xl items-center absolute z-10'
+                    className='flex bg-primary text-background text-4xl items-center absolute z-10'
 						variants={opacity}
 						initial="initial"
 						animate="enter"
 					>
-						<span className='block w-2.5 h-2.5 bg-background rounded-full mr-2.5'></span>
+						<span className='block w-2.5 h-2.5 bg-primary rounded-full mr-2.5'></span>
 						{words[index]}
 					</motion.p>
 					<svg className='absolute top-0 w-full h-[calc(100%+300px)]' >
